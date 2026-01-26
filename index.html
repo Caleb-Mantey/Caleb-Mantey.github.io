@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -35,6 +35,8 @@
       id="theme-opt"
     />
     <link href="css/colors/default.css" rel="stylesheet" id="color-opt" />
+    <!-- Animations -->
+    <link href="css/animations.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body
@@ -82,6 +84,10 @@
             <!--end nav item-->
             <li class="nav-item">
               <a class="nav-link" href="#services">About</a>
+            </li>
+            <!--end nav item-->
+            <li class="nav-item">
+              <a class="nav-link" href="#achievements">Achievements</a>
             </li>
             <!--end nav item-->
             <li class="nav-item">
@@ -192,29 +198,36 @@
     <!-- Hero Area -->
     <div
       class="hero-area position-relative bg-half-120"
-      style="background-image: url('images/wade 2.jpg')"
+      style="background-image: url(&quot;images/banner.png&quot;)"
       id="home"
     >
       <div class="bg-overlay"></div>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12 col-md-12 align-items-center text-center">
-            <div class="title-heading mt-4 pb-60">
+            <div class="title-heading">
               <img
-                src="images/pp.jpg"
-                class="img-fluid rounded-circle"
+                src="images/dp.jpeg"
+                class="img-fluid rounded-circle hero-image-animate"
                 width="200px"
                 height="200px"
                 alt=""
               />
-              <h1 class="heading font-36 text-white mt-4">
+              <h1 class="heading font-36 text-white mt-4 hero-heading-animate">
                 Here I'am Caleb Mantey
               </h1>
-              <h6 class="designation mb-3 text-white">
+              <h6 class="designation mb-3 text-white hero-subtitle-animate">
                 I'm a Passionate
-                <span class="text-primary">Software Engineer</span>
+                <span class="text-primary"
+                  >XR Developer & Software Engineer</span
+                >
+                <br />
+                <small class="text-white-50"
+                  >7+ Years in XR Development | Pioneer in XR in Ghana/Africa
+                  since 2016</small
+                >
               </h6>
-              <div class="hero-btn mt-4 pt-2">
+              <div class="hero-btn mt-4 pt-2 hero-buttons-animate">
                 <a
                   href="mailto:manteycaleb@gmail.com"
                   class="btn btn-primary rounded me-2 mb-2"
@@ -285,9 +298,9 @@
                         </h4>
                         <p class="text-light-muted mt-2">
                           Hello I'am Caleb Mantey, a Software Engineer based in
-                          Accra, Ghana. I have over 3 years of experience and am
-                          experienced with all stages of the development cycle
-                          for various software projects.
+                          Accra, Ghana. I have over 7 years of experience and am
+                          experienced with all stages of the software
+                          development life cycle.
                         </p>
                         <!-- <img src="images/signature.png" height="35" alt="" /> -->
                       </div>
@@ -310,7 +323,7 @@
     <!--end section -->
 
     <!-- Service Start -->
-    <section class="section bg-light" id="services">
+    <section class="section bg-light fade-in-section" id="services">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 text-center">
@@ -320,22 +333,25 @@
                 <p
                   class="pera-title para-desc-600 text-light-muted mb-0 mx-auto"
                 >
-                  I am a passionate and self taught software engineer from
-                  Accra, Ghana. I love Web development, game development and
-                  XR(AR, VR, MR). Growing up as a child i always had love for
-                  tech. This pushed me into learning c++, c#, html,css,js and
-                  game development with unity. My love for games was so
-                  overwhelming that i enjoyed developing my own games and
-                  sharing with friends. Over the years i have been intrigued by
-                  how technology is evolving. I spend most of my days working as
-                  Fullstack Software Engineer. I primarily work on building new
-                  software features, software architecture planning, sprints
-                  planning, developing api's and integrate third party api's and
-                  payment services into software applications. During my
-                  weekends and free time i like to spend time researching into
-                  XR and building games. I love to learn and i don't have a
-                  favorite language or framework, i adjust when the need arises
-                  and learn what needs to get the job done.
+                  I am a passionate XR developer and software engineer from
+                  Accra, Ghana, with over 7 years of immersive technology
+                  experience. As a pioneer in XR development in Ghana and Africa
+                  since 2016, I have dedicated my career to advancing virtual,
+                  augmented, and mixed reality technologies. My journey began
+                  with a deep love for game development using Unity and C#,
+                  which evolved into specializing in XR applications for
+                  education, training, and collaborative experiences. As
+                  Co-Founder and CTO of Relu Interactives, I lead the
+                  development of cutting-edge spatial computing solutions and
+                  real-time collaborative platforms. My technical stack spans
+                  Unity3D (7+ years), XR SDKs (Meta Quest, Apple Vision Pro),
+                  WebXR, full-stack development (React, Node.js, Python), and
+                  cloud technologies. I am particularly interested in the
+                  intersection of XR technology, education technology, and
+                  collaborative systems. I actively engage with the XR research
+                  community through technical writing, workshops, and industry
+                  collaborations, constantly exploring new paradigms in
+                  immersive computing.
                 </p>
                 <span></span>
               </div>
@@ -453,14 +469,105 @@
               </div>
             </div>
           </div>
-        </div> -->
-        <!-- end row -->
+        </div>  -->
       </div>
     </section>
     <!-- End Start -->
 
+    <!-- Achievements & Awards Start -->
+    <section class="section bg-white fade-scale-section" id="achievements">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <div class="container-title text-center mb-4 pb-2">
+              <div class="titles">
+                <h2 class="title text-capitalize mb-4">
+                  Achievements & Recognition
+                </h2>
+                <p
+                  class="pera-title para-desc-600 text-light-muted mb-0 mx-auto"
+                >
+                  National awards and industry recognition highlighting
+                  innovation and impact in XR development
+                </p>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12 mt-4 pt-2 stagger-item">
+            <div class="card border-0 rounded shadow overflow-hidden h-100">
+              <div class="position-relative">
+                <img
+                  src="images/awards/NEIP Prize 2.jpg"
+                  class="img-fluid"
+                  alt="Presidential Pitch Award"
+                  style="height: 300px; object-fit: cover; width: 100%;"
+                />
+                <div class="position-absolute top-0 end-0 m-3">
+                  <span class="badge bg-warning text-dark px-3 py-2">
+                    <i class="mdi mdi-trophy"></i> National Award
+                  </span>
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <h5 class="title mb-2">2023 NEIP Presidential Pitch Winner</h5>
+                <p class="text-muted mb-2" style="font-size: 0.9rem;">
+                  <strong>National Entrepreneurship & Innovation Programme (NEIP), Ghana</strong>
+                </p>
+                <p class="text-muted mb-0" style="font-size: 0.875rem;">
+                  My startup (Relu Interactives) won the prestigious Presidential Pitch competition, 
+                  demonstrating exceptional innovation in XR technology and spatial computing solutions. 
+                  This national recognition validates our pioneering work in bringing immersive 
+                  technologies to African markets.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--end col-->
+
+          <div class="col-lg-6 col-md-6 col-12 mt-4 pt-2 stagger-item">
+            <div class="card border-0 rounded shadow overflow-hidden h-100">
+              <div class="position-relative">
+                <img
+                  src="images/awards/Association of Ghana Startups (AGS) Award Small small.jpg"
+                  class="img-fluid"
+                  alt="Ghana Innovation & Startup Award"
+                  style="height: 300px; object-fit: cover; width: 100%;"
+                />
+                <div class="position-absolute top-0 end-0 m-3">
+                  <span class="badge bg-success text-white px-3 py-2">
+                    <i class="mdi mdi-star"></i> Industry Award
+                  </span>
+                </div>
+              </div>
+              <div class="card-body p-4">
+                <h5 class="title mb-2">Ghana Innovation & Startup Award 2023</h5>
+                <p class="text-muted mb-2" style="font-size: 0.9rem;">
+                  <strong>Animation/Gaming Startup of the Year - Relu Interactives</strong>
+                </p>
+                <p class="text-muted mb-0" style="font-size: 0.875rem;">
+                  Recognized as the leading animation and gaming startup in Ghana for 2023. 
+                  This award highlights our company's innovative approach to XR development, 
+                  real-time collaboration platforms, and our contribution to advancing the 
+                  XR ecosystem in Africa.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--end col-->
+        </div>
+        <!-- end row -->
+      </div>
+    </section>
+    <!-- Achievements End -->
+
     <!-- Start Section -->
-    <section class="section" id="resume">
+    <section class="section fade-in-section" id="resume">
       <div class="container">
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-4">
@@ -481,7 +588,7 @@
             <div class="row">
               <div class="main-timeline">
                 <div class="timeline mt-4">
-                  <a href="#" class="timeline-content">
+                  <a href="https://reluinteractives.com" target="_blank" class="timeline-content">
                     <div class="timeline-icon text-primary">
                       <i data-feather="feather" class="fea icon-md"></i>
                     </div>
@@ -493,22 +600,29 @@
                     <small class="company"
                       >Relu Interactives - Co-Founder / CTO</small
                     >
+                    <!-- <div class="mt-2">
+                      <span class="badge bg-primary me-1"
+                        >🏆 2023 NEIP Presidential Pitch Winner</span
+                      >
+                      <span class="badge bg-success"
+                        >🎮 2023 Gaming Startup of the Year</span
+                      >
+                    </div> -->
 
                     <p class="description text-light-muted mt-2">
                       Led the development of cutting-edge XR, simulation, and
-                      game projects across AR, VR, and Web3D platforms. Directed
+                      game projects across AR, VR, and WebXR platforms. Directed
                       cross-functional teams to build immersive experiences,
                       digital twins, and interactive training simulations.
                       Architected scalable backend systems, integrated XR SDKs,
-                      and ensured high-quality gameplay. Managed projects using
-                      Plane, provided team training, and fostered a culture of
-                      innovation and tech adoption.
+                      and ensured high-quality interactions/experiences. Managed projects with Agile methodologies,
+                      provided team training, and fostered a culture of innovation and tech adoption.
                     </p>
                   </a>
                 </div>
 
                 <div class="timeline mt-4">
-                  <a href="#" class="timeline-content">
+                  <a href="https://think-it.io" target="_blank" class="timeline-content">
                     <div class="timeline-icon text-primary">
                       <i data-feather="feather" class="fea icon-md"></i>
                     </div>
@@ -533,7 +647,7 @@
                 </div>
 
                 <div class="timeline mt-4">
-                  <a href="#" class="timeline-content">
+                  <a href="https://www.zenjob.com" target="_blank" class="timeline-content">
                     <div class="timeline-icon text-primary">
                       <i data-feather="feather" class="fea icon-md"></i>
                     </div>
@@ -562,7 +676,7 @@
                 </div>
 
                 <div class="timeline mt-4">
-                  <a href="#" class="timeline-content">
+                  <a href="https://www.andela.com/" target="_blank" class="timeline-content">
                     <div class="timeline-icon text-primary">
                       <i data-feather="feather" class="fea icon-md"></i>
                     </div>
@@ -586,7 +700,7 @@
                 </div>
 
                 <div class="timeline mt-4">
-                  <a href="#" class="timeline-content">
+                  <a href="https://encodevlabs.com/" target="_blank" class="timeline-content">
                     <div class="timeline-icon text-primary">
                       <i data-feather="feather" class="fea icon-md"></i>
                     </div>
@@ -609,7 +723,7 @@
                   </a>
                 </div>
                 <div class="timeline mt-4">
-                  <a href="#" class="timeline-content">
+                  <a href="https://sokoaerial.com/" target="_blank" class="timeline-content">
                     <div class="timeline-icon text-primary">
                       <i data-feather="navigation" class="fea icon-md"></i>
                     </div>
@@ -632,7 +746,7 @@
                   </a>
                 </div>
                 <div class="timeline mt-4">
-                  <a href="#" class="timeline-content">
+                  <a href="https://www.stanbicbank.com.gh/gh/personal" target="_blank" class="timeline-content">
                     <div class="timeline-icon text-primary">
                       <i data-feather="package" class="fea icon-md"></i>
                     </div>
@@ -728,8 +842,8 @@
 
     <!-- Skill & CTA START -->
     <section
-      class="cta-full"
-      style="background-image: url('images/bg-pattern.png')"
+      class="cta-full fade-in-section"
+      style="background-image: url(&quot;images/bg-pattern.png&quot;)"
     >
       <div class="container-fluid">
         <div class="row position-relative">
@@ -897,7 +1011,7 @@
                         class="skill-icon rounded-circle shadow-lg d-inline-block"
                       >
                         <img
-                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-plain.svg"
+                          src="images/skills/nestjs.jpg"
                           alt="nestjs"
                           class="img-fluid mx-auto"
                         />
@@ -1232,7 +1346,7 @@
     <!-- Skill & CTA End -->
 
     <!-- Projects/Work Start -->
-    <section class="section bg-white" id="projects">
+    <section class="section bg-white fade-scale-section" id="projects">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 text-center">
@@ -1267,6 +1381,15 @@
                 <div class="overlay-work bg-dark"></div>
                 <div class="content">
                   <h5 class="mb-0" style="text-align: left">
+                    <strong>besaCare - Healthcare Access Platform</strong><br />
+                    Mobile telemedicine app with appointment booking, video
+                    consultations, health records.<br />
+                    <small
+                      ><strong>Tech:</strong> Flutter, Node.js, Redis,
+                      MongoDB</small
+                    ><br />
+                    <small><strong>Role:</strong> Lead Mobile Developer</small
+                    ><br />
                     <a
                       href="https://play.google.com/store/apps/details?id=com.besacare.patient"
                       target="_blank"
@@ -1275,7 +1398,7 @@
                       >View Project</a
                     >
                   </h5>
-                  <h6 class="text-light tag mb-0">besaCare Health App</h6>
+                  <h6 class="text-light tag mb-0">EdTech & Accessibility</h6>
                 </div>
                 <div class="icons text-center">
                   <a
@@ -1380,6 +1503,17 @@
                 <div class="overlay-work bg-dark"></div>
                 <div class="content">
                   <h5 class="mb-0">
+                    <strong
+                      >PetSim - VR Training for Veterinary Education</strong
+                    ><br />
+                    Immersive VR simulation for Meta Quest enabling veterinary
+                    students to practice surgical procedures.<br />
+                    <small><strong>Tech:</strong> Unity3D, C#, Oculus SDK</small
+                    ><br />
+                    <small
+                      ><strong>Research:</strong> User studies on learning
+                      effectiveness, HCI in VR education</small
+                    ><br />
                     <a
                       href="https://caleb-mantey.itch.io/survey-kit-simulation"
                       target="_blank"
@@ -1388,7 +1522,9 @@
                       >View Project</a
                     >
                   </h5>
-                  <h6 class="text-light tag mb-0">Survey Kit Simulation</h6>
+                  <h6 class="text-light tag mb-0">
+                    Educational VR - HCI & User-Centered Design
+                  </h6>
                 </div>
                 <div class="icons text-center">
                   <a
@@ -1494,6 +1630,16 @@
                 <div class="overlay-work bg-dark"></div>
                 <div class="content">
                   <h5 class="mb-0">
+                    <strong>Coca-Cola VR Soccer Shootout</strong><br />
+                    Immersive penalty shootout VR experience for HTC Vive with
+                    realistic physics and leaderboards.<br />
+                    <small
+                      ><strong>Tech:</strong> Unity3D, SteamVR, Physics</small
+                    ><br />
+                    <small
+                      ><strong>Engagement:</strong> 500+ participants, UX
+                      research</small
+                    ><br />
                     <a
                       href="https://www.youtube.com/watch?v=9YB0R8QwzdE&t=30s"
                       target="_blank"
@@ -1502,7 +1648,9 @@
                       >View Project</a
                     >
                   </h5>
-                  <h6 class="text-light tag mb-0">Soccer Shootout (VR Game)</h6>
+                  <h6 class="text-light tag mb-0">
+                    VR Marketing - User Experience & HCI
+                  </h6>
                 </div>
                 <div class="icons text-center">
                   <a
@@ -1531,6 +1679,15 @@
                 <div class="overlay-work bg-dark"></div>
                 <div class="content">
                   <h5 class="mb-0">
+                    <strong>Virtual Exhibition Platform</strong><br />
+                    Multi-user VR platform for HTC Vive with real-time
+                    collaboration and shared interactions.<br />
+                    <small><strong>Tech:</strong> Unity3D, Photon, WebRTC</small
+                    ><br />
+                    <small
+                      ><strong>Research:</strong> Collaborative VR, social
+                      presence</small
+                    ><br />
                     <a
                       href="https://caleb-mantey.itch.io/standard-chartered-ghana-virtual-tour"
                       target="_blank"
@@ -1540,7 +1697,7 @@
                     >
                   </h5>
                   <h6 class="text-light tag mb-0">
-                    Standard Chartered Virtual Exhibition (VR and Web)
+                    Multi-User VR Collaboration
                   </h6>
                 </div>
                 <div class="icons text-center">
@@ -1800,7 +1957,7 @@
     <!--end section -->
 
     <!-- Blog Start -->
-    <section class="section bg-light" id="news">
+    <section class="section bg-light fade-in-section" id="news">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 text-center">
@@ -1810,8 +1967,7 @@
                 <p
                   class="pera-title para-desc-600 text-light-muted mb-0 mx-auto"
                 >
-                  Read my blog posts and give me a like or follow if you love my
-                  content.
+                  Check out my latest articles and insights on XR development, technology, and innovation
                 </p>
                 <span></span>
               </div>
@@ -1821,149 +1977,27 @@
         </div>
         <!--end row-->
 
-        <div class="row">
-          <!-- <div class="col-lg-4 col-md-6">
-            <iframe
-              type="text/html"
-              src="https://dev.to/calebmantey/solid-design-principles-in-javascript-part-1-single-responsibility-principle-4k0c"
-              target="_parent"
-            ></iframe>
-          </div> -->
-          <div class="col-lg-4 col-md-6">
-            <div class="blog-post rounded customer-testi m-1">
-              <div class="position-relative">
-                <img
-                  src="https://res.cloudinary.com/practicaldev/image/fetch/s--NEzri-4b--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0w0qqojvrcvc62tnb9fp.jpeg"
-                  class="img-fluid rounded-top"
-                  alt=""
-                />
-              </div>
-              <div class="content pt-4 pb-4 p-3">
-                <h5>
-                  <a
-                    href="https://dev.to/calebmantey/solid-design-principles-in-javascript-part-3-interface-segregation-principle-dependency-inversion-5b1i"
-                    class="title text-dark"
-                    target="_blank"
-                    >Solid Design Principles In Javascript (Part 3) — Interface
-                    Segregation Principle & Dependency Inversion</a
-                  >
-                </h5>
-                <p class="text-light-muted mb-3">
-                  Welcome back folks, hope you have been enjoying this series so
-                  far. This is the final part of ........
-                </p>
-                <div class="post-meta d-flex justify-content-between mt-3">
-                  <ul class="list-unstyled mb-0 d-flex justify-content-between">
-                    <li class="list-inline-item me-2 mb-0">
-                      <a href="javascript:void(0)" class="text-light-muted date"
-                        ><i class="mdi mdi-calendar-edit me-1"></i> Feb 11,
-                        2022</a
-                      >
-                    </li>
-                  </ul>
-                  <a
-                    href="https://dev.to/calebmantey/solid-design-principles-in-javascript-part-3-interface-segregation-principle-dependency-inversion-5b1i"
-                    class="text-muted readmore"
-                    target="_blank"
-                    >Read More <i class="mdi mdi-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-              <!--end content-->
+        <div class="row" id="medium-posts-container">
+          <!-- Medium posts will be loaded here dynamically -->
+          <div class="col-12 text-center">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Loading...</span>
             </div>
-            <!--end blog post-->
+            <p class="mt-3 text-muted">Loading recent blog posts...</p>
           </div>
+        </div>
+        <!--end row-->
 
-          <div class="col-lg-4 col-md-6">
-            <div class="blog-post rounded customer-testi m-1">
-              <div class="position-relative">
-                <img
-                  src="https://res.cloudinary.com/practicaldev/image/fetch/s--aNnYqqCw--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/nhe8dtq9sjtrplmdguzg.jpeg"
-                  class="img-fluid rounded-top"
-                  alt=""
-                />
-              </div>
-              <div class="content pt-4 pb-4 p-3">
-                <h5>
-                  <a
-                    href="https://dev.to/calebmantey/solid-design-principles-in-javascript-part-2-open-closed-principle-liskov-substitution-principle-2h63"
-                    class="title text-dark"
-                    target="_blank"
-                    >Solid Design Principles In Javascript (Part 2) —
-                    Open-Closed Principle / Liskov Substitution Principle</a
-                  >
-                </h5>
-                <p class="text-light-muted mb-3">
-                  Hello readers, in my previous article i talked about solid
-                  design patterns and covered the first principle (<strong
-                    >Single Responsibility Principle</strong
-                  >). In this ........
-                </p>
-                <div class="post-meta d-flex justify-content-between mt-3">
-                  <ul class="list-unstyled mb-0 d-flex justify-content-between">
-                    <li class="list-inline-item me-2 mb-0">
-                      <a href="javascript:void(0)" class="text-light-muted date"
-                        ><i class="mdi mdi-calendar-edit me-1"></i>Feb 10,
-                        2022</a
-                      >
-                    </li>
-                  </ul>
-                  <a
-                    href="https://dev.to/calebmantey/solid-design-principles-in-javascript-part-2-open-closed-principle-liskov-substitution-principle-2h63"
-                    class="text-muted readmore"
-                    target="_blank"
-                    >Read More <i class="mdi mdi-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-              <!--end content-->
-            </div>
-            <!--end blog post-->
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="blog-post rounded customer-testi m-1">
-              <div class="position-relative">
-                <img
-                  src="https://res.cloudinary.com/practicaldev/image/fetch/s--mRj2AZIB--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ygel268eb9t6yzig8g00.jpeg"
-                  class="img-fluid rounded-top"
-                  alt=""
-                />
-              </div>
-              <div class="content pt-4 pb-4 p-3">
-                <h5>
-                  <a
-                    href="https://dev.to/calebmantey/solid-design-principles-in-javascript-part-1-single-responsibility-principle-4k0c"
-                    class="title text-dark"
-                    target="_blank"
-                    >Solid Design Principles In Javascript (Part 1) — Single
-                    Responsibility Principle</a
-                  >
-                </h5>
-                <p class="text-light-muted mb-3">
-                  Hi i am Mantey Caleb a software engineer based in Accra,
-                  Ghana. One of the things i have been doing recently is reading
-                  about design patterns and practicing a lot. I tried .........
-                </p>
-                <div class="post-meta d-flex justify-content-between mt-3">
-                  <ul class="list-unstyled mb-0 d-flex justify-content-between">
-                    <li class="list-inline-item me-2 mb-0">
-                      <a href="javascript:void(0)" class="text-light-muted date"
-                        ><i class="mdi mdi-calendar me-1"></i>Feb 10, 2022</a
-                      >
-                    </li>
-                  </ul>
-                  <a
-                    href="https://dev.to/calebmantey/solid-design-principles-in-javascript-part-1-single-responsibility-principle-4k0c"
-                    class="text-muted readmore"
-                    target="_blank"
-                    >Read More <i class="mdi mdi-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-              <!--end content-->
-            </div>
-            <!--end blog post-->
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <a
+              href="https://medium.com/@manteycaleb"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary rounded"
+            >
+              View All Posts <i class="mdi mdi-chevron-right"></i>
+            </a>
           </div>
         </div>
         <!--end row-->
@@ -1971,9 +2005,13 @@
       <!--end container-->
     </section>
     <!--end section -->
+      </div>
+      <!--end container-->
+    </section>
+    <!--end section -->
 
     <!-- Contact Start -->
-    <section class="section pb-5" id="contact">
+    <section class="section pb-5 fade-in-section" id="contact">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 text-center">
@@ -2319,5 +2357,11 @@
 
     <!-- Main Js -->
     <script src="js/app.js"></script>
+
+    <!-- Scroll Animations -->
+    <script src="js/scroll-animations.js"></script>
+
+    <!-- Medium Posts -->
+    <script src="js/medium-posts.js"></script>
   </body>
 </html>

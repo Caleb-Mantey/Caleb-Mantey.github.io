@@ -1133,8 +1133,9 @@ button:not(:disabled) {
 }
 
 .title-heading img {
-  height: 200px;
-  border: 5px solid #dee2e6;
+  height: 125px;
+  width: 125px;
+  border: 2px solid #dee2e6;
 }
 
 .shadow {
