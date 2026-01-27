@@ -4,8 +4,8 @@ var typed = new Typed("#typed", {
   typeSpeed: 200,
   loop: true,
   strings: [
-    "Software Engineer",
-    "Indie Game Developer",
-    "XR (VR/AR) Developer",
+    "Software Engineering",
+    "Game Development",
+    "XR (VR/AR) Development",
   ],
 });
