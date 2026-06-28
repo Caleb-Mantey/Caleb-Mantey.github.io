@@ -2,17 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Caleb Mantey - Portfolio</title>
+    <title>Caleb Mantey — CTO &amp; AI / XR Engineer | Agentic AI · Spatial Computing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Caleb Mantey Software Engineer (Portfolio Website)"
+      content="Caleb Mantey (Mantey Caleb Edem Komla) — Co-Founder & CTO of Relu Interactives and creator of Relu Spatial, a browser-native WebXR platform. I build autonomous AI agents, multi-agent systems, and immersive spatial computing experiences."
     />
     <meta
       name="keywords"
-      content="mantey, caleb, portfolio, software engineer"
+      content="Caleb Mantey, Mantey Caleb, CTO, Relu Interactives, Relu Spatial, agentic AI, AI agents, multi-agent systems, RAG, LLM engineer, XR developer, VR, AR, WebXR, spatial computing, software engineer, Ghana"
     />
-    <meta content="Mantey Caleb" name="author" />
+    <meta content="Mantey Caleb Edem Komla" name="author" />
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Caleb Mantey — CTO &amp; AI / XR Engineer" />
+    <meta
+      property="og:description"
+      content="Co-Founder & CTO of Relu Interactives, creator of Relu Spatial. I build agentic AI systems and immersive XR / spatial computing experiences."
+    />
+    <meta property="og:image" content="images/dp.jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Caleb Mantey — CTO &amp; AI / XR Engineer" />
+    <meta
+      name="twitter:description"
+      content="Co-Founder & CTO of Relu Interactives, creator of Relu Spatial. Agentic AI + immersive XR."
+    />
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
     <!-- Bootstrap -->
@@ -37,6 +52,8 @@
     <link href="css/colors/default.css" rel="stylesheet" id="color-opt" />
     <!-- Animations -->
     <link href="css/animations.css" rel="stylesheet" type="text/css" />
+    <!-- Modern design layer (loaded last to refine the template) -->
+    <link href="css/enhance.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body
@@ -62,7 +79,7 @@
     >
       <div class="container">
         <!-- Logo container-->
-        <a class="logo navbar-brand" href="#">Portfolio</a>
+        <a class="logo navbar-brand" href="#">Caleb Mantey</a>
 
         <button
           class="navbar-toggler"
@@ -84,6 +101,14 @@
             <!--end nav item-->
             <li class="nav-item">
               <a class="nav-link" href="#services">About</a>
+            </li>
+            <!--end nav item-->
+            <li class="nav-item">
+              <a class="nav-link" href="#ai">AI Agents</a>
+            </li>
+            <!--end nav item-->
+            <li class="nav-item">
+              <a class="nav-link" href="#relu">Startup</a>
             </li>
             <!--end nav item-->
             <li class="nav-item">
@@ -211,35 +236,59 @@
                 class="img-fluid rounded-circle hero-image-animate"
                 width="200px"
                 height="200px"
-                alt=""
+                alt="Caleb Mantey"
               />
               <h1 class="heading font-36 text-white mt-4 hero-heading-animate">
-                Here I'am Caleb Mantey
+                Hi, I'm <span class="hero-gradient-text">Caleb Mantey</span>
               </h1>
-              <h6 class="designation mb-3 text-white hero-subtitle-animate">
-                I'm a Passionate
-                <span class="text-primary"
-                  >XR Developer & Software Engineer</span
-                >
-                <br />
-                <small class="text-white-50"
-                  >7+ Years in Software Engineering | Pioneer in XR in Ghana/Africa
-                  since 2016</small
-                >
+              <h6 class="designation mb-2 text-white hero-subtitle-animate">
+                CTO &amp; Founder building at the edge of
+                <span class="hero-gradient-text">Agentic AI</span> and
+                <span class="hero-gradient-text">Spatial Computing</span>
               </h6>
+              <div class="hero-pills hero-subtitle-animate">
+                <span class="hero-pill"><i data-feather="cpu" class="fea icon-sm"></i> AI Agent Engineer</span>
+                <span class="hero-pill"><i data-feather="box" class="fea icon-sm"></i> XR / Spatial Developer</span>
+                <span class="hero-pill"><i data-feather="code" class="fea icon-sm"></i> Full-Stack Engineer</span>
+                <span class="hero-pill"><i data-feather="award" class="fea icon-sm"></i> CTO, Relu Interactives</span>
+              </div>
               <div class="hero-btn mt-4 pt-2 hero-buttons-animate">
                 <a
-                  href="mailto:manteycaleb@gmail.com"
+                  href="#ai"
                   class="btn btn-primary rounded me-2 mb-2"
+                  >Explore My AI Work</a
+                >
+                <a
+                  href="mailto:manteycaleb@gmail.com"
+                  class="btn btn-ghost-light rounded me-2 mb-2"
                   >Hire Me</a
                 >
                 <a
                   href="mycv.pdf"
                   target="_blank"
-                  class="btn btn-primary rounded text-white mb-2"
+                  class="btn btn-ghost-light rounded mb-2"
                   >Download CV
                   <i data-feather="download" class="fea icon-sm"></i
                 ></a>
+              </div>
+
+              <div class="hero-stats hero-buttons-animate">
+                <div class="hero-stat">
+                  <div class="num">7+</div>
+                  <div class="lbl">Years Engineering</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="num">2016</div>
+                  <div class="lbl">XR Pioneer · Ghana/Africa</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="num">2×</div>
+                  <div class="lbl">National Awards</div>
+                </div>
+                <div class="hero-stat">
+                  <div class="num">AI</div>
+                  <div class="lbl">Agents in Production</div>
+                </div>
               </div>
             </div>
           </div>
@@ -292,15 +341,17 @@
                           What I Do:
                           <span
                             class="element text-primary"
-                            data-elements="Software Engineering, Game Development, XR (VR/AR) Development"
+                            data-elements="Agentic AI Engineering, AI Agent Development, XR &amp; Spatial Computing, Full-Stack Engineering"
                           ></span>
                           <span id="typed" class="text-primary"></span>
                         </h4>
                         <p class="text-light-muted mt-2">
-                          Hello I'm Caleb Mantey, a Software Engineer based in
-                          Accra, Ghana. I have over 7 years of experience and I'm
-                          experienced with all stages of the software
-                          development life cycle.
+                          I'm Caleb Mantey Co-Founder &amp; CTO of
+                          <strong>Relu Interactives</strong> and creator of
+                          <strong>Relu Spatial</strong>, our browser-native WebXR
+                          platform. I build autonomous AI agents and immersive
+                          spatial experiences, with 7+ years across the full
+                          software development life cycle.
                         </p>
                         <!-- <img src="images/signature.png" height="35" alt="" /> -->
                       </div>
@@ -329,30 +380,31 @@
           <div class="col-12 text-center">
             <div class="container-title text-center mb-4 pb-2">
               <div class="titles">
-                <h2 class="title text-capitalize mb-4">About</h2>
+                <span class="section-eyebrow">Who I Am</span>
+                <h2 class="title text-capitalize mb-4">About Me</h2>
                 <p
                   class="pera-title para-desc-600 text-light-muted mb-0 mx-auto"
                 >
-                    I am an XR developer and software engineer from Accra, Ghana,
-                    turning bold ideas into immersive realities for over 7 years.
-                    As one of the early pioneers of XR in Ghana and Africa since
-                    2016, I’ve been obsessed with pushing what’s possible in
-                    virtual, augmented, and mixed reality. I started out building
-                    games in Unity and C#, then quickly moved into crafting XR
-                    experiences for education, training, and real-time
-                    collaboration where impact meets innovation. As Co-Founder and
-                    CTO of Relu Interactives, I lead teams building next-gen
-                    spatial computing solutions and multi-user XR platforms that
-                    help people learn, work, and connect in entirely new ways.
-                    My toolkit spans Unity3D (7+ years), XR SDKs (Meta Quest,
-                    Apple Vision Pro), WebXR, and full-stack development (React,
-                    Node.js, Python) powered by modern cloud infrastructure.
-                    I’m especially excited about the intersection of XR,
-                    education, and collaboration designing systems that don’t just
-                    look futuristic, but actually solve real-world problems. I
-                    regularly share insights through technical writing, workshops,
-                    and research-driven collaborations, always exploring the next
-                    frontier in immersive computing.
+                    I'm a software engineer, AI builder, and XR pioneer from
+                    Accra, Ghana turning bold ideas into intelligent, immersive
+                    products for over 7 years. As Co-Founder &amp; CTO of
+                    <strong>Relu Interactives</strong> and the creator of
+                    <strong>Relu Spatial</strong> (our browser-native WebXR
+                    platform). I work where artificial intelligence meets spatial
+                    computing: building autonomous AI agents that reason and act,
+                    and immersive experiences people can step inside.
+                    I started out shipping games in Unity and C#, became one of
+                    the earliest pioneers of XR in Ghana and Africa since 2016,
+                    then moved deep into AI engineering, building production AI
+                    agents, multi-agent systems, RAG pipelines, and LLM-powered
+                    automation with OpenAI, Anthropic Claude, LangChain, LlamaIndex,
+                    Hugging Face, Pi Agent Sdk, you name it. My toolkit spans agentic AI, Unity3D, XR SDKs
+                    (Meta Quest, Apple Vision Pro), WebXR, and full-stack
+                    development (React, Node.js, Python) on modern cloud
+                    infrastructure. I lead teams, share insights through technical
+                    writing and workshops, and stay obsessed with one question:
+                    how do we make technology that doesn't just look futuristic,
+                    but actually solves real-world problems?
                 </p>
                 <span></span>
               </div>
@@ -475,6 +527,235 @@
     </section>
     <!-- End Start -->
 
+    <!-- Agentic AI Section Start -->
+    <section class="section fade-in-section" id="ai">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <div class="container-title text-center mb-4 pb-2">
+              <div class="titles">
+                <span class="section-eyebrow">AI Engineering</span>
+                <h2 class="title text-capitalize mb-4">
+                  I Build Agentic AI Systems
+                </h2>
+                <p class="pera-title para-desc-600 text-light-muted mb-0 mx-auto">
+                  We're in the age of AI and I build the agents that power it.
+                  From autonomous, tool-using agents and multi-agent
+                  orchestration to RAG pipelines and production LLM systems, I
+                  design AI that reasons, uses tools, and takes real action.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end row-->
+
+        <!-- Capabilities grid -->
+        <div class="ai-grid mt-2">
+          <div class="ai-card">
+            <div class="ai-ico"><i data-feather="cpu" class="fea icon-md"></i></div>
+            <h5>Autonomous AI Agents</h5>
+            <p>
+              I design goal-driven agents that plan, reason, and execute
+              multi-step tasks using tool-calling, memory, and self-correction
+              loops (agents that get work done, not just chat).
+            </p>
+          </div>
+          <div class="ai-card">
+            <div class="ai-ico"><i data-feather="git-merge" class="fea icon-md"></i></div>
+            <h5>Multi-Agent Orchestration</h5>
+            <p>
+              I build collaborative agent systems where specialized agents
+              coordinate, delegate, and verify each other's work using
+              orchestrator–worker patterns and graph-based workflows (LangGraph).
+            </p>
+          </div>
+          <div class="ai-card">
+            <div class="ai-ico"><i data-feather="database" class="fea icon-md"></i></div>
+            <h5>RAG &amp; Knowledge Systems</h5>
+            <p>
+              I ground LLMs in private data with retrieval-augmented generation,
+              vector search, embeddings, and semantic memory so answers are
+              accurate, sourced, and trustworthy.
+            </p>
+          </div>
+          <div class="ai-card">
+            <div class="ai-ico"><i data-feather="tool" class="fea icon-md"></i></div>
+            <h5>Tool Use &amp; MCP</h5>
+            <p>
+              I connect agents to real-world tools, APIs, and the Model Context
+              Protocol (MCP) so they can take action across systems, booking,
+              querying, automating, and integrating end-to-end.
+            </p>
+          </div>
+          <div class="ai-card">
+            <div class="ai-ico"><i data-feather="message-square" class="fea icon-md"></i></div>
+            <h5>LLM Engineering &amp; Prompting</h5>
+            <p>
+              Production prompt engineering, structured outputs, function
+              calling, evaluation, and guardrails across OpenAI, Anthropic
+              Claude, and open-source models (reliable AI you can ship).
+            </p>
+          </div>
+          <div class="ai-card">
+            <div class="ai-ico"><i data-feather="box" class="fea icon-md"></i></div>
+            <h5>Agentic 3D &amp; Spatial AI</h5>
+            <p>
+              My frontier: fusing LLM agents with XR and real-time 3D AI that
+              generates, composes, and drives immersive spatial experiences. It's
+              the direction powering our WebXR platform, <strong>Relu Spatial</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Build pipeline -->
+        <div class="row justify-content-center mt-5 pt-4">
+          <div class="col-12 text-center mb-4">
+            <span class="section-eyebrow">My Process</span>
+            <h4 class="title text-white" style="font-family: 'Space Grotesk', sans-serif;">
+              How I Build Production AI Agents
+            </h4>
+          </div>
+        </div>
+        <div class="ai-pipeline">
+          <div class="ai-step">
+            <span class="step-num">01</span>
+            <h6>Define Goal &amp; Guardrails</h6>
+            <p>Clarify the task, success criteria, scope, and safety boundaries the agent must operate within.</p>
+          </div>
+          <div class="ai-step">
+            <span class="step-num">02</span>
+            <h6>Design Tools &amp; Context</h6>
+            <p>Wire up the right tools, APIs, RAG retrieval and MCP servers so the agent has the context to act.</p>
+          </div>
+          <div class="ai-step">
+            <span class="step-num">03</span>
+            <h6>Orchestrate Reasoning</h6>
+            <p>Compose planning, memory, and multi-agent workflows, single agent or coordinated swarm.</p>
+          </div>
+          <div class="ai-step">
+            <span class="step-num">04</span>
+            <h6>Evaluate &amp; Trace</h6>
+            <p>Build evals, trace every step, catch failures, and iterate on prompts, tools and routing.</p>
+          </div>
+          <div class="ai-step">
+            <span class="step-num">05</span>
+            <h6>Ship &amp; Monitor</h6>
+            <p>Deploy to production with logging, cost controls, and observability then keep improving.</p>
+          </div>
+        </div>
+
+        <!-- Tech stack chips -->
+        <div class="row justify-content-center mt-5 pt-3">
+          <div class="col-lg-10 text-center">
+            <p class="text-light-muted mb-3" style="letter-spacing: 0.08em; font-size: 13px; text-transform: uppercase; font-weight: 600;">
+              AI / Agentic Stack I Work With
+            </p>
+            <div class="ai-chips">
+              <span class="ai-chip">Python</span>
+              <span class="ai-chip">OpenAI</span>
+              <span class="ai-chip">Anthropic Claude</span>
+              <span class="ai-chip">LangChain</span>
+              <span class="ai-chip">LangGraph</span>
+              <span class="ai-chip">LlamaIndex</span>
+              <span class="ai-chip">Hugging Face</span>
+              <span class="ai-chip">RAG</span>
+              <span class="ai-chip">Vector DBs · pgvector / Pinecone</span>
+              <span class="ai-chip">Embeddings</span>
+              <span class="ai-chip">Model Context Protocol (MCP)</span>
+              <span class="ai-chip">Function / Tool Calling</span>
+              <span class="ai-chip">Vercel AI SDK</span>
+              <span class="ai-chip">FastAPI</span>
+              <span class="ai-chip">Node.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end container-->
+    </section>
+    <!-- Agentic AI Section End -->
+
+    <!-- Relu Interactives Start -->
+    <section class="section relu-section fade-in-section" id="relu">
+      <div class="container">
+        <!-- Company header -->
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <span class="section-eyebrow relu-eyebrow">My Startup · Co-Founder &amp; CTO</span>
+            <img
+              src="images/relu/relu-logo-white.svg"
+              alt="Relu Interactives"
+              class="relu-logo"
+            />
+            <h2 class="relu-title">
+              Building Africa's Future Through
+              <span class="relu-grad">Interactive Technology</span>
+            </h2>
+            <p class="relu-lead">
+              I co-founded and lead engineering at <strong>Relu Interactives</strong>,
+              Ghana's premier immersive technology company. We create immersive
+              <strong>3D &amp; XR</strong> solutions that help organizations
+              <strong>train</strong>, <strong>visualize</strong>, and
+              <strong>solve real-world problems</strong>, pioneering the future of
+              interactive technology in Africa.
+            </p>
+          </div>
+        </div>
+
+        <!-- What we build -->
+        <div class="relu-do-grid mt-5">
+          <div class="relu-do-card">
+            <div class="relu-ico"><i data-feather="monitor" class="fea icon-md"></i></div>
+            <h5>Enterprise VR / AR Training</h5>
+            <p>Immersive training simulations that streamline operations, improve communication, and sharpen decision-making.</p>
+          </div>
+          <div class="relu-do-card">
+            <div class="relu-ico"><i data-feather="layers" class="fea icon-md"></i></div>
+            <h5>Digital Twins</h5>
+            <p>Interactive 3D replicas of real assets and environments for visualization, monitoring, and analysis.</p>
+          </div>
+          <div class="relu-do-card">
+            <div class="relu-ico"><i data-feather="globe" class="fea icon-md"></i></div>
+            <h5>Real-time 3D &amp; WebXR</h5>
+            <p>High-performance, real-time 3D experiences that run anywhere, on the open web, mobile, and headsets.</p>
+          </div>
+          <div class="relu-do-card">
+            <div class="relu-ico"><i data-feather="play-circle" class="fea icon-md"></i></div>
+            <h5>Interactive Entertainment</h5>
+            <p>Games and creative XR products designed to inspire, entertain, and connect audiences.</p>
+          </div>
+        </div>
+
+        <!-- Credibility / trusted by -->
+        <div class="relu-trust mt-5">
+          <div class="relu-trust-badges">
+            <span class="relu-trust-badge"><i data-feather="award" class="fea icon-sm"></i> 2× National Award Winner</span>
+            <span class="relu-trust-badge"><i data-feather="map-pin" class="fea icon-sm"></i> Accra, Ghana</span>
+            <span class="relu-trust-badge"><i data-feather="users" class="fea icon-sm"></i> R&amp;D-Led Team</span>
+          </div>
+          <div class="relu-trust-logos">
+            <span class="relu-trust-label">Trusted by</span>
+            <img src="images/relu/client-fnb.png" alt="First National Bank" />
+            <img src="images/relu/client-gnpc.png" alt="GNPC" />
+            <img src="images/relu/client-ghanagas.png" alt="Ghana National Gas" />
+            <img src="images/relu/client-knust.png" alt="KNUST" />
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-5 pt-2">
+          <a href="https://reluinteractives.com" target="_blank" rel="noopener" class="btn btn-relu rounded me-2 mb-2">
+            Visit Relu Interactives <i data-feather="arrow-up-right" class="fea icon-sm"></i>
+          </a>
+          <a href="mailto:manteycaleb@gmail.com?subject=Project%20with%20Relu%20Interactives" class="btn btn-ghost-light rounded mb-2">
+            Start a Project
+          </a>
+        </div>
+      </div>
+      <!--end container-->
+    </section>
+    <!-- Relu Interactives End -->
+
     <!-- Achievements & Awards Start -->
     <section class="section bg-white fade-scale-section" id="achievements">
       <div class="container">
@@ -482,6 +763,7 @@
           <div class="col-12 text-center">
             <div class="container-title text-center mb-4 pb-2">
               <div class="titles">
+                <span class="section-eyebrow">Recognition</span>
                 <h2 class="title text-capitalize mb-4">
                   Achievements & Recognition
                 </h2>
@@ -573,11 +855,12 @@
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-4">
             <div class="work-content mt-4">
+              <span class="section-eyebrow">Experience</span>
               <h2 class="text-capitalize">Work History</h2>
               <p class="mb-0 text-light-muted">
-                A brief overview of my career so far. Am experienced with all
-                stages of the software development cycle with a lot of
-                diversity.
+                7+ years spanning AI engineering, XR, and full-stack
+                development — from founding and leading Relu Interactives to
+                building AI agents and immersive systems for global teams.
               </p>
               <a href="#contact" class="btn btn btn-primary rounded mt-4 pt-2"
                 >Contact Me <i class="mdi mdi-chevron-right"></i
@@ -874,6 +1157,26 @@
               <!--end row-->
 
               <div class="row align-items-center">
+                <div class="col-lg-3 col-6 mt-4 pt-2">
+                  <div
+                    class="card explore-feature border-0 text-center bg-white p-3"
+                  >
+                    <div class="card-body p-0">
+                      <div
+                        class="skill-icon rounded-circle shadow-lg d-inline-block"
+                      >
+                        <img
+                          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                          alt="python"
+                          class="img-fluid mx-auto"
+                        />
+                      </div>
+                      <span class="badge skill-badge badge-light">Python</span>
+                    </div>
+                  </div>
+                </div>
+                <!--end col-->
+
                 <div class="col-lg-3 col-6 mt-4 pt-2">
                   <div
                     class="card explore-feature border-0 text-center bg-white p-3"
@@ -1353,11 +1656,13 @@
           <div class="col-12 text-center">
             <div class="container-title text-center mb-4 pb-2">
               <div class="titles">
+                <span class="section-eyebrow">Portfolio</span>
                 <h2 class="title text-capitalize mb-4">My Work & Portfolio</h2>
                 <p
                   class="pera-title para-desc-600 text-light-muted mb-0 mx-auto"
                 >
-                  Check out some of my works.
+                  A selection of XR, AI, game, and full-stack projects I've
+                  shipped — from immersive VR training to production apps.
                 </p>
                 <span></span>
               </div>
@@ -1964,11 +2269,13 @@
           <div class="col-12 text-center">
             <div class="container-title text-center mb-4 pb-2">
               <div class="titles">
+                <span class="section-eyebrow">Insights</span>
                 <h2 class="title text-capitalize mb-4">My Recent Blogs</h2>
                 <p
                   class="pera-title para-desc-600 text-light-muted mb-0 mx-auto"
                 >
-                  Check out my latest articles and insights on XR development, technology, and innovation
+                  My latest articles and insights on AI agents, XR, and building
+                  at the frontier of technology.
                 </p>
                 <span></span>
               </div>
@@ -2018,12 +2325,13 @@
           <div class="col-12 text-center">
             <div class="container-title text-center mb-4 pb-2">
               <div class="titles">
+                <span class="section-eyebrow">Get In Touch</span>
                 <h2 class="title text-capitalize mb-4">Contact Me</h2>
                 <p
                   class="pera-title para-desc-600 text-light-muted mb-0 mx-auto"
                 >
-                  Do not hesitate to contact me for all your projects needs.
-                  Reach out now let's start an awesome partnership.
+                  Building something with AI agents or XR? Hiring? Let's talk —
+                  reach out and let's start an awesome partnership.
                 </p>
                 <span></span>
               </div>
