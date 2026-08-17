@@ -7,15 +7,61 @@
  *     03.  Back to top     *
 ############################*/
 
-window.addEventListener("load", fn, false);
+function hidePreloader() {
+  const preloader = document.getElementById("preloader");
+  if (!preloader || preloader.dataset.hidden === "true") return;
 
-//  window.onload = function loader() {
-function fn() {
-  // Preloader
-  setTimeout(() => {
-    document.getElementById("preloader").style.visibility = "hidden";
-    document.getElementById("preloader").style.opacity = "0";
-  }, 350);
+  preloader.dataset.hidden = "true";
+  preloader.style.visibility = "hidden";
+  preloader.style.opacity = "0";
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", hidePreloader, { once: true });
+} else {
+  hidePreloader();
+}
+
+// Never let a slow remote asset or media request trap the page behind the loader.
+setTimeout(hidePreloader, 1500);
+
+function loadDeferredVideo(video) {
+  const sources = video.querySelectorAll("source[data-src]");
+  sources.forEach((source) => {
+    source.src = source.dataset.src;
+    source.removeAttribute("data-src");
+  });
+  video.load();
+  video.play().catch(() => {});
+}
+
+function initDeferredVideos() {
+  const videos = document.querySelectorAll("video[data-lazy-video]");
+  if (!videos.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    videos.forEach(loadDeferredVideo);
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        loadDeferredVideo(entry.target);
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "400px 0px" }
+  );
+
+  videos.forEach((video) => observer.observe(video));
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initDeferredVideos, { once: true });
+} else {
+  initDeferredVideos();
 }
 
 // Menu sticky

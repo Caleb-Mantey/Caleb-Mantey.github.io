@@ -218,17 +218,116 @@ a.text-primary:hover { color: var(--violet) !important; }
   box-shadow: var(--card-shadow-hover) !important;
 }
 
+/* Consistent project-card dimensions across images and video previews */
+#projects .work-container {
+  width: 100%;
+  height: 380px;
+}
+#projects .work-container .card-body {
+  width: 100%;
+  height: 100%;
+}
+#projects .work-container .card-body > img,
+#projects .work-container .card-body > video {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+#projects .work-container.work-modern video {
+  transition: transform 0.28s ease;
+}
+#projects .work-container.work-modern:hover video {
+  transform: scale(1.13) translateZ(0);
+}
+#projects .work-container.work-modern .content {
+  right: 5%;
+  bottom: 6%;
+  color: #fff;
+  text-align: left;
+}
+#projects .work-container.work-modern .content h5,
+#projects .work-container.work-modern .content strong,
+#projects .work-container.work-modern .content small {
+  color: #fff;
+}
+#projects .work-container.work-modern .content h5 {
+  font-size: 15px;
+  line-height: 1.55;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+#projects .work-container.work-modern .content .title {
+  color: #d9ddff !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+#projects .work-container.work-modern .icons {
+  top: 18px;
+  right: 18px;
+  left: auto;
+  transform: none;
+}
+
+@media (max-width: 575px) {
+  #projects .work-container { height: 350px; }
+  #projects .work-container.work-modern .content h5 {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+}
+
 /* skill icon cards */
-.explore-feature { border: 1px solid #eef0f7 !important; }
+.explore-feature {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.explore-feature:hover { box-shadow: none !important; }
+.explore-feature .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  text-align: center;
+}
 .card-body .skill-icon {
-  background: #fff;
+  order: 1;
+  width: 72px;
+  height: 72px;
+  line-height: normal;
+  flex: 0 0 72px;
+  background: transparent;
+  border: 0 !important;
+  box-shadow: none !important;
   border-radius: 18px !important;
   display: flex !important;
   align-items: center;
   justify-content: center;
 }
+.card-body .skill-icon img {
+  width: 52px !important;
+  height: 52px !important;
+  max-width: none;
+  padding: 0 !important;
+  object-fit: contain;
+}
 .explore-feature:hover .skill-icon { transform: translateY(-3px) scale(1.04); }
 .explore-feature .skill-badge {
+  order: 2;
+  position: static !important;
+  display: block !important;
+  width: auto;
+  height: auto;
+  inset: auto;
+  margin: 0;
+  padding: 0;
+  line-height: 1.25;
+  text-align: center;
+  white-space: normal;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 600;
 }
@@ -479,8 +578,8 @@ a.text-primary:hover { color: var(--violet) !important; }
   font-family: "Plus Jakarta Sans", sans-serif; font-size: 13px; font-weight: 600;
   color: #ffd9bf;
   padding: 7px 14px; border-radius: 999px;
-  background: rgba(255, 106, 26, 0.1);
-  border: 1px solid rgba(255, 106, 26, 0.28);
+  background: transparent;
+  border: 0;
 }
 .relu-trust-badge i { color: #ff9a5a; }
 .relu-trust-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
