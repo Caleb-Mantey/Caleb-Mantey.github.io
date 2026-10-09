@@ -25,6 +25,7 @@ Updated 2 October 2026. These notes are working evidence for future edits; they 
 - The old site calls the 2023 award "Animation/Gaming Startup of the Year"; public winner coverage uses "Animation/Gaming Startup Innovation of the Year." The new material uses the documented category name.
 - Caleb confirmed on 2 October 2026 that he is Relu Spatial's lead engineer and built the platform across its backend and XR engine. This individual contribution comes from Caleb directly; the public product site confirms the platform capabilities, though it does not detail his personal implementation work.
 - No customer count or production-scale claim is made for Relu Spatial.
+- On 9 October 2026 Caleb asked for ACTIVA to be removed from the Software/AI page but kept on the CV, and confirmed Dropin's stack: NestJS, WebSockets, PostgreSQL, Docker, and Flutter. The product description comes from dropinghana.com. His exact role on Dropin is not yet recorded, so the CV lists it under projects, not under an employer.
 - Company-level project pages establish that the work exists, but do not always establish Caleb's exact individual contribution. The wording stays at his documented leadership or team role rather than claiming sole authorship.
 
 ## Good next evidence to add

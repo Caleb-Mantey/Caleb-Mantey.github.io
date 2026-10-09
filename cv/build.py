@@ -124,7 +124,7 @@ DATA = {
                    "operations, health, workforce, and payments. Strongest backend experience in Ruby on Rails, "
                    "Node.js/NestJS, and Python.",
         "skills": [
-            ("Backend & data", "Ruby on Rails, Node.js, NestJS, Python / FastAPI, REST, PostgreSQL, MySQL, Redis"),
+            ("Backend & data", "Ruby on Rails, Node.js, NestJS, Python / FastAPI, REST, WebSockets, PostgreSQL, MySQL, Redis"),
             ("Frontend & mobile", "TypeScript, React, Next.js, Angular, Flutter, React Native"),
             ("AI engineering", "LLM APIs (OpenAI, Claude), agents, multi-agent, RAG, LangChain, LangGraph, MCP, evals"),
             ("Delivery", "Docker, AWS, DigitalOcean, GitHub Actions, CI/CD, automated testing, leadership"),
@@ -155,6 +155,7 @@ DATA = {
         "projects": [
             ("Relu Spatial", "Lead engineer; backend + engine for a cross-device 3D/WebXR creation platform."),
             ("ACTIVA", "Industrial operations intelligence with live dashboards, alerts, and a built-in AI assistant."),
+            ("Dropin", "Ride-hailing app for Ghana with rider and driver apps; NestJS, WebSockets, PostgreSQL, Docker, Flutter."),
             ("Zenjob AI workflows", "LLM-powered matching and operational automation inside a workforce product."),
             ("besaCare", "Healthcare-access platform (appointments, consultations, records); architecture + mobile."),
             ("eGotickets", "Ruby on Rails ticketing & payments platform with features, integrations, and deployment."),
