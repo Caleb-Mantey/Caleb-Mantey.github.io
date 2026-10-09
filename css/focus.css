@@ -163,6 +163,8 @@ img, video { display: block; max-width: 100%; }
 .card .thumb img, .card .thumb video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .card:hover .thumb img, .card:hover .thumb video { transform: scale(1.05); }
 .card .thumb.contain img { object-fit: contain; padding: 14px 0 0; }
+.card .thumb.site img, .game .thumb.site img { object-position: left top; }
+.card .thumb.site.center img, .game .thumb.site.center img { object-position: center top; }
 .card:hover .thumb.contain img { transform: translateY(-4px); }
 .card .thumb.dropin { background: linear-gradient(160deg, #ffd400, #f2b705 55%, #1a1a1a 55%); }
 .card .thumb .badge {
@@ -179,11 +181,6 @@ img, video { display: block; max-width: 100%; }
 .card .meta span { font-size: 0.72rem; font-weight: 600; color: var(--ink-2); background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 4px 9px; }
 .card .link { margin-top: auto; font-weight: 700; color: var(--accent); font-size: 0.92rem; }
 .card .link:hover { text-decoration: underline; text-underline-offset: 3px; }
-.card-art {
-  position: relative; height: 194px; display: flex; align-items: flex-end; padding: 22px;
-  color: #fff; font-family: "Space Grotesk", sans-serif; font-size: 1.7rem; font-weight: 700; line-height: 1.05; overflow: hidden;
-}
-.card-art::after { content: ""; position: absolute; width: 210px; height: 210px; border: 2px solid rgba(255,255,255,.4); border-radius: 50%; right: -52px; top: -82px; box-shadow: 0 0 0 28px rgba(255,255,255,.08); }
 
 /* Featured project (full width, split) */
 .feature {

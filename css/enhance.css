@@ -356,34 +356,6 @@ a.text-primary:hover { color: var(--violet) !important; }
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-/* gradient tiles for project cards that have no footage */
-.work-container.work-modern .work-art {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  min-height: 300px;
-  display: flex;
-  align-items: flex-end;
-  padding: 24px;
-  color: #fff;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.05;
-  text-align: left;
-  transition: color 0.3s ease;
-}
-.work-container.work-modern:hover .work-art { color: transparent; }
-.work-container.work-modern .work-art::after {
-  content: "";
-  position: absolute;
-  width: 230px; height: 230px;
-  right: -60px; top: -90px;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.08);
-}
-
 /* projects overlay tint */
 .work-container.work-modern .overlay-work {
   background-image: linear-gradient(160deg, rgba(99, 102, 241, 0.55) 0%, rgba(13, 16, 36, 0.96) 70%) !important;
