@@ -148,6 +148,9 @@ DATA = {
             ("Encodev Labs / eGotickets", "Software Engineer", "Sep 2020 – Apr 2023", [
                 "Maintained and extended a Ruby on Rails ticketing & payments platform; contributed architecture and mobile engineering to besaCare, a health-access platform.",
             ]),
+            ("Dropin", "Senior Software Engineer (Contract)", "Sep 2019 – Aug 2020", [
+                "Managed the development team for a ride-hailing app in Ghana and wrote code across the stack: NestJS, WebSockets, PostgreSQL, Docker, and Flutter.",
+            ]),
             ("Stanbic Bank Ghana", "Software Developer", "Jun 2019 – Oct 2019", [
                 "Implemented frontend and backend features for banking applications (Angular, Java/Spring Boot).",
             ]),
@@ -155,7 +158,6 @@ DATA = {
         "projects": [
             ("Relu Spatial", "Lead engineer; backend + engine for a cross-device 3D/WebXR creation platform."),
             ("ACTIVA", "Industrial operations intelligence with live dashboards, alerts, and a built-in AI assistant."),
-            ("Dropin", "Senior engineer (contract) on a ride-hailing app for Ghana; managed the development team and wrote code across the stack (NestJS, WebSockets, PostgreSQL, Docker, Flutter)."),
             ("Zenjob AI workflows", "LLM-powered matching and operational automation inside a workforce product."),
             ("besaCare", "Healthcare-access platform (appointments, consultations, records); architecture + mobile."),
             ("eGotickets", "Ruby on Rails ticketing & payments platform with features, integrations, and deployment."),
