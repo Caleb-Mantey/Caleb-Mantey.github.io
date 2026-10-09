@@ -139,7 +139,7 @@ DATA = {
                 "Built AI-powered matching and workflow-automation features for a European staffing platform, integrating LLM tooling into product and operational processes.",
                 "Partnered across teams to find automation opportunities and connect new services into existing workflows.",
             ]),
-            ("Think-it", "Software Engineer", "Apr 2023 – Jun 2025", [
+            ("Think-it", "Software / AI Engineer", "Apr 2023 – Jun 2025", [
                 "Built and maintained scalable, AI-integrated applications for mission-driven climate- and health-technology partners, with strong tests, docs, and performance work.",
             ]),
             ("Andela / client projects", "Senior Software Engineer", "Sep 2021 – Jan 2024", [
