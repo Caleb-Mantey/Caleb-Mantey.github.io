@@ -155,7 +155,7 @@ DATA = {
         "projects": [
             ("Relu Spatial", "Lead engineer; backend + engine for a cross-device 3D/WebXR creation platform."),
             ("ACTIVA", "Industrial operations intelligence with live dashboards, alerts, and a built-in AI assistant."),
-            ("Dropin", "Ride-hailing app for Ghana with rider and driver apps; NestJS, WebSockets, PostgreSQL, Docker, Flutter."),
+            ("Dropin", "Senior engineer (contract) on a ride-hailing app for Ghana; managed the development team and wrote code across the stack (NestJS, WebSockets, PostgreSQL, Docker, Flutter)."),
             ("Zenjob AI workflows", "LLM-powered matching and operational automation inside a workforce product."),
             ("besaCare", "Healthcare-access platform (appointments, consultations, records); architecture + mobile."),
             ("eGotickets", "Ruby on Rails ticketing & payments platform with features, integrations, and deployment."),
