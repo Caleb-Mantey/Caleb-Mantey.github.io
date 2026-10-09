@@ -162,6 +162,9 @@ img, video { display: block; max-width: 100%; }
 .card .thumb { position: relative; height: 194px; overflow: hidden; background: #eef1f8; }
 .card .thumb img, .card .thumb video { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
 .card:hover .thumb img, .card:hover .thumb video { transform: scale(1.05); }
+.card .thumb.contain img { object-fit: contain; padding: 14px 0 0; }
+.card:hover .thumb.contain img { transform: translateY(-4px); }
+.card .thumb.dropin { background: linear-gradient(160deg, #ffd400, #f2b705 55%, #1a1a1a 55%); }
 .card .thumb .badge {
   position: absolute; top: 12px; left: 12px; z-index: 2;
   font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
