@@ -191,9 +191,17 @@ img, video { display: block; max-width: 100%; }
 .feature .fe-media img, .feature .fe-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .feature .fe-body { padding: 42px; display: flex; flex-direction: column; justify-content: center; }
 .feature .fe-body .tag { color: #8fe3ff; }
-.feature .fe-body h3 { color: #fff; font-size: 1.9rem; margin: 10px 0 12px; }
+.feature .fe-body h3 { color: #fff; font-size: 1.9rem; line-height: 1.15; margin: 10px 0 12px; }
 .feature .fe-body p { color: #c7cdeb; margin: 0 0 14px; }
 .feature .fe-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 22px; }
+/* Full-frame variant: for widescreen footage that can't survive a tall crop */
+.feature.cinema .fe-media { aspect-ratio: 16 / 9; min-height: 0; }
+@media (min-width: 921px) {
+  .feature.cinema { grid-template-columns: 1.3fr 1fr; align-items: center; }
+  .feature.cinema .fe-media { margin-left: 22px; border-radius: 14px; overflow: hidden; }
+}
+.feature .actions { margin-top: 0; }
+.feature .button.secondary { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.35); color: #fff; }
 .feature .fe-chips span { font-size: 0.76rem; font-weight: 600; color: #dfe4ff; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.06); border-radius: 999px; padding: 6px 12px; }
 
 /* ---------- Games strip ---------- */
