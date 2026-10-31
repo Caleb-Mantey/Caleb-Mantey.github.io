@@ -3,7 +3,7 @@
    (xr.html + software-ai.html). Premium, recruiter-facing.
    Theme accent switches via body.theme-xr / body.theme-ai.
    ============================================================ */
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
 :root {
   --ink: #0e1222;
@@ -191,18 +191,56 @@ img, video { display: block; max-width: 100%; }
 .feature .fe-media img, .feature .fe-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .feature .fe-body { padding: 42px; display: flex; flex-direction: column; justify-content: center; }
 .feature .fe-body .tag { color: #8fe3ff; }
-.feature .fe-body h3 { color: #fff; font-size: 1.9rem; line-height: 1.15; margin: 10px 0 12px; }
+.feature .fe-body h3 { color: #fff; font-size: 1.9rem; margin: 10px 0 12px; }
 .feature .fe-body p { color: #c7cdeb; margin: 0 0 14px; }
 .feature .fe-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 22px; }
-/* Full-frame variant: for widescreen footage that can't survive a tall crop */
-.feature.cinema .fe-media { aspect-ratio: 16 / 9; min-height: 0; }
-@media (min-width: 921px) {
-  .feature.cinema { grid-template-columns: 1.3fr 1fr; align-items: center; }
-  .feature.cinema .fe-media { margin-left: 22px; border-radius: 14px; overflow: hidden; }
-}
-.feature .actions { margin-top: 0; }
-.feature .button.secondary { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.35); color: #fff; }
 .feature .fe-chips span { font-size: 0.76rem; font-weight: 600; color: #dfe4ff; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.06); border-radius: 999px; padding: 6px 12px; }
+
+/* ---------- Game hero: uses Akofena's own brand (black, gold, Anton) ---------- */
+.game-hero {
+  --gh-black: #0b0b0d; --gh-ink: #f4e9d3; --gh-mute: rgba(244, 233, 211, 0.72);
+  --gh-gold: #fcd116; --gh-line: rgba(252, 209, 22, 0.22);
+  position: relative; overflow: hidden; margin-bottom: 22px; border-radius: 22px;
+  background: var(--gh-black); color: var(--gh-ink); box-shadow: var(--shadow);
+}
+.gh-stage { position: relative; aspect-ratio: 21 / 9; background: var(--gh-black); }
+.gh-stage video { width: 100%; height: 100%; object-fit: cover; object-position: center 62%; }
+.gh-stage::after {
+  /* runs past the video: it can end on a fractional pixel and leave a bright row */
+  content: ""; position: absolute; inset: 0 0 -3px; pointer-events: none;
+  background: linear-gradient(180deg, rgba(11, 11, 13, 0.3) 0, transparent 20%, transparent 48%, rgba(11, 11, 13, 0.86) 76%, var(--gh-black) 90%);
+}
+.gh-tag {
+  position: absolute; z-index: 1; top: 20px; right: 24px; padding-right: 10px;
+  font-family: "Anton", Impact, sans-serif; font-size: 0.86rem; letter-spacing: 0.08em; text-transform: uppercase;
+  border-right: 3px solid var(--gh-gold); text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+}
+.gh-body {
+  position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 56px; align-items: end;
+  margin-top: -74px; padding: 0 44px 32px;
+}
+.gh-kicker { display: block; margin-bottom: 12px; font-size: 0.74rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gh-gold); }
+.gh-brand h3 { margin: 0; }
+.gh-brand img { width: min(100%, 420px); height: auto; filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.7)); }
+.gh-line { margin: 16px 0 0; font-family: "Anton", Impact, sans-serif; font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.15; letter-spacing: 0.015em; text-transform: uppercase; }
+.gh-line em { font-style: normal; color: var(--gh-gold); }
+.gh-copy { margin: 0; color: var(--gh-mute); font-size: 1rem; }
+.gh-note { margin: 10px 0 0; color: rgba(244, 233, 211, 0.5); font-size: 0.84rem; }
+.gh-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.gh-btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 10px 30px; border-radius: 14px;
+  font-family: "Anton", Impact, sans-serif; font-size: 1.06rem; letter-spacing: 0.07em; text-transform: uppercase; color: #1c1304;
+  background: linear-gradient(180deg, #fff2a6 0%, #fcd116 46%, #d98e00 100%);
+  box-shadow: 0 14px 28px -14px rgba(252, 209, 22, 0.75); transition: transform 0.2s ease, filter 0.2s ease;
+}
+.gh-btn:hover { transform: translateY(-2px); filter: brightness(1.06); }
+.gh-btn.ghost { color: var(--gh-ink); background: transparent; border: 1px solid rgba(244, 233, 211, 0.34); box-shadow: none; }
+.gh-btn.ghost:hover { border-color: var(--gh-gold); color: var(--gh-gold); filter: none; }
+.gh-stats { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; padding: 0 44px; list-style: none; border-top: 1px solid var(--gh-line); }
+.gh-stats li { display: grid; gap: 2px; padding: 20px 0 22px; }
+.gh-stats li + li { padding-left: 26px; border-left: 1px solid var(--gh-line); }
+.gh-stats b { font-family: "Anton", Impact, sans-serif; font-size: 1.7rem; font-weight: 400; line-height: 1.1; letter-spacing: 0.02em; color: var(--gh-gold); }
+.gh-stats span { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gh-mute); }
 
 /* ---------- Games strip ---------- */
 .games { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
@@ -310,6 +348,9 @@ html.js .reveal.vis { opacity: 1; transform: none; }
   .hero-portrait { margin: 18px auto 0; max-width: 300px; }
   .cards, .games { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .feature { grid-template-columns: 1fr; }
+  .gh-stage { aspect-ratio: 16 / 9; }
+  .gh-body { grid-template-columns: 1fr; margin-top: -48px; padding: 0 26px 26px; }
+  .gh-stats { padding: 0 26px; }
   .feature .fe-media { min-height: 230px; }
   .award-grid, .stack { grid-template-columns: 1fr; }
   .teach { grid-template-columns: 1fr; text-align: center; justify-items: center; gap: 16px; }
@@ -326,4 +367,9 @@ html.js .reveal.vis { opacity: 1; transform: none; }
   .statbar-inner { grid-template-columns: 1fr 1fr; }
   .hero h1 { font-size: 2.4rem; }
   .feature .fe-body { padding: 28px; }
+  .gh-stats { grid-template-columns: 1fr 1fr; }
+  .gh-stats li:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .gh-stats li:nth-child(n + 3) { border-top: 1px solid var(--gh-line); }
+  .gh-tag { top: 14px; right: 16px; font-size: 0.74rem; }
+  .gh-btn { flex: 1; padding: 10px 14px; white-space: nowrap; }
 }
