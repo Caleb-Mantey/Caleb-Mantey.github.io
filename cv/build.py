@@ -40,6 +40,7 @@ SIDE_PAD_L = 9 * mm
 SIDE_INNER = SIDE_W - SIDE_PAD_L - 7 * mm
 MAIN_X = SIDE_W + 8 * mm
 MAIN_W = PAGE_W - MAIN_X - 13 * mm
+BAND = 14 * mm                   # header band on page 2+
 
 CONTACT = (
     "Accra, Ghana", "manteycaleb@gmail.com", "+233 57 887 6149",
@@ -70,44 +71,111 @@ def styles(theme):
         "meta":   ParagraphStyle("meta", fontName="Helvetica-Oblique", fontSize=8.1, leading=10.8, textColor=acc, spaceAfter=2),
         "bullet": ParagraphStyle("bullet", fontName="Helvetica", fontSize=8.8, leading=11.7, textColor=INK, leftIndent=9, firstLineIndent=-9, spaceAfter=1.5),
         "proj":   ParagraphStyle("proj", fontName="Helvetica", fontSize=8.8, leading=11.7, textColor=INK, leftIndent=9, firstLineIndent=-9, spaceAfter=2.5),
+        # grouped project list (XR CV, page 2)
+        "p_group": ParagraphStyle("p_group", fontName="Helvetica-Bold", fontSize=8.4, leading=11, textColor=acc, spaceBefore=7, spaceAfter=3, keepWithNext=1),
+        "proj2":  ParagraphStyle("proj2", fontName="Helvetica", fontSize=8.7, leading=11.7, textColor=INK, spaceAfter=4.5),
     }
 
 
 DATA = {
     "xr": {
         "summary": "XR & game developer, Co-Founder/CTO of Relu Interactives, and lead engineer of Relu Spatial. "
-                   "I have pioneered immersive technology in Africa since 2016, building VR training simulators, "
-                   "industrial digital twins, multiplayer 3D, and Unity games, plus the browser-native WebXR engine "
-                   "behind Relu Spatial. I studied Geomatic Engineering, so I bring training in spatial data and "
-                   "coordinate systems, the same math XR runs on.",
+                   "I have built immersive technology in Africa since 2016: filmed 360° VR experiences, VR and "
+                   "mixed-reality training on Meta Quest, industrial digital twins, brand-activation VR, multiplayer "
+                   "3D, and games in Unity and the browser. My work includes Cocoa 360 for the University of Ghana, "
+                   "GhanaCedi@60 VR for First National Bank, the VIVaTS digital twin for Ghana National Gas, and VR "
+                   "experiences for Coca-Cola, Closeup and Standard Chartered Ghana. "
+                   "I studied Geomatic Engineering, so I bring training in spatial data and coordinate systems, "
+                   "the same math XR runs on.",
         "skills": [
-            ("XR & real-time 3D", "Unity, C#, WebXR, Three.js, React Three Fiber, OpenXR, Meta Quest, VR / AR / MR"),
-            ("Spatial systems", "3D interaction, simulation, multiplayer networking, digital twins, GIS & spatial data"),
-            ("Engineering", "TypeScript, React, Node.js, Blender, WebRTC, performance optimization"),
+            ("XR & real-time 3D", "Unity, C#, Meta Quest & Apple Vision Pro SDKs, OpenXR, WebXR, Three.js, React Three Fiber"),
+            ("Immersive media", "360° video VR, VR storytelling, mixed reality (passthrough, hand tracking), mobile AR"),
+            ("Multiplayer", "Photon, WebRTC, rollback netcode, shared sessions and voice"),
+            ("Spatial systems", "Simulation, digital twins, 3D interaction, GIS & spatial data"),
+            ("Engineering", "TypeScript, React, Node.js, Blender, performance optimization"),
             ("Leadership", "Technical direction, team leadership, product delivery, public speaking"),
         ],
         "experience": [
             ("Relu Interactives", "Co-Founder & CTO", "Sep 2022 – Present", [
                 "Built Relu Spatial end-to-end, from backend services to the real-time XR engine, enabling AI-assisted 3D creation and cross-device publishing to web, mobile, and headsets.",
-                "Directed PetSim, a petroleum drilling-rig training simulation endorsed by five Ghanaian universities and offered free to students; it anchored Relu’s 2023 NEIP Presidential Pitch win.",
+                "Built Cocoa 360 for the University of Ghana (2025): a VR experience filmed in 360° on Ghanaian cocoa farms that shows how cocoa is grown and produced.",
+                "Built GhanaCedi@60 VR for First National Bank with Streamline360 (2025): a narrative VR journey through four eras of Ghana’s currency.",
+                "Built PetSim and its Meta Quest 3 mixed-reality build, a drilling-rig training simulation endorsed by five Ghanaian universities and free to students; it anchored Relu’s 2023 NEIP Presidential Pitch win.",
                 "Delivered VIVaTS, an operator-training and live-monitoring digital twin of national gas infrastructure for Ghana National Gas Company.",
-                "Shipped 10+ immersive products across training, digital twins, brand activations, and VR games on Unity/C#, WebXR, and Meta Quest/OpenXR.",
+                "Build Relu’s games: SortJam VR, Africa’s Legends VR with Leti Arts, and AKOFENA, a free online fighting game.",
                 "Lead cross-disciplinary teams (engineering, 3D art, design) from prototype to delivery; represent the company in industry talks and workshops.",
             ]),
             ("Andela / client projects", "Software Engineer, Web 3D & Games", "Sep 2021 – Jan 2024", [
-                "Built and ported browser-based 3D games and WebXR prototypes for distributed client teams; integrated gameplay with backend services and fixed production performance issues.",
+                "Built and ported browser-based 3D games for crypto and Telegram platforms; wired gameplay into server-side logic with client teams and fixed scaling problems.",
             ]),
             ("Soko Aerial Signal Training School", "AR / VR Developer & Researcher", "Sep 2019 – Aug 2020", [
-                "Prototyped Unity VR/AR experiences for military training and spatial awareness; mentored junior developers.",
+                "Built AR and VR training experiences for new military recruits in Unity and Blender; mentored junior developers.",
             ]),
         ],
-        "projects": [
-            ("Relu Spatial", "Lead engineer; backend + XR engine for an AI-assisted 3D/WebXR creation and publishing platform."),
-            ("PetSim", "Petroleum drilling-rig training sim, free to every student in Ghana and endorsed by five universities."),
-            ("VIVaTS", "Operator-training and live-monitoring digital twin for Ghana National Gas Company."),
-            ("Africa’s Legends VR", "VR adaptation of African superhero stories, built with Leti Arts."),
-            ("SortJam VR", "Physics-based VR sorting game with timed challenges and themed-world progression."),
-            ("Dark Echoes + itch.io", "Unity third-person shooter and other playable demos published on itch.io."),
+        "projects_title": "XR, VR & game projects",
+        # (group, [(name, client / context, description, [(link label, url)])])
+        "project_groups": [
+            ("360° video & narrative VR", [
+                ("Cocoa 360 VR", "University of Ghana · 2025",
+                 "A VR experience filmed in 360° on cocoa farms in Ghana. It shows how cocoa is grown, harvested and processed, so viewers stand on the farm instead of reading about it. Footage on request.", []),
+                ("GhanaCedi@60 VR", "First National Bank, with Streamline360 · 2025",
+                 "A commemorative VR journey through 60 years of the Ghana Cedi, from cowry shells and the shilling to the old and new cedi, each era rebuilt as a place.",
+                 [("reluinteractives.com/studios/ghanacedi", "https://reluinteractives.com/studios/ghanacedi")]),
+            ]),
+            ("VR experiences & VR games", [
+                ("Coca-Cola VR Soccer Shootout", "Brand activations · Meta Quest",
+                 "A VR penalty shootout with realistic physics and leaderboards, played by more than 500 people at live brand activations.",
+                 [("Watch", "https://www.youtube.com/watch?v=9YB0R8QwzdE&t=30s")]),
+                ("Closeup VR", "Unilever brand activation · Meta Quest",
+                 "A VR experience built for a Closeup brand activation.",
+                 [("LinkedIn post", "https://www.linkedin.com/posts/caleb-mantey-a461a9148_closeup-rumble5-unilever-activity-6953919923458838528-qMD5")]),
+                ("Standard Chartered Ghana VR tour", "Standard Chartered Ghana · Meta Quest",
+                 "A VR virtual tour, with a version you can play in the browser.",
+                 [("itch.io", "https://caleb-mantey.itch.io/standard-chartered-ghana-virtual-tour")]),
+                ("Virtual Exhibition", "Multi-user VR · Unity, Photon, WebRTC",
+                 "A shared VR space with real-time collaboration, shared interactions and voice.", []),
+                ("SortJam VR", "Relu original · in development",
+                 "A physics-based VR sorting game across farm, hospital, workshop and ice-cream worlds, with timed challenges.",
+                 [("reluinteractives.com/studios/sort-jam", "https://reluinteractives.com/studios/sort-jam")]),
+                ("Africa’s Legends VR", "With Leti Arts",
+                 "VR adaptation of the African superhero franchise: worlds, combat and the headset release for heroes drawn from African folklore.",
+                 [("reluinteractives.com/studios/africa-legends", "https://reluinteractives.com/studios/africa-legends")]),
+                ("Relu Spatial VR games", "Playable in a Meta Quest browser",
+                 "Hoops Arena, Slice Rush, Range Rivals and Mixed Reality Counters Ball, built on Relu Spatial.",
+                 [("reluspatial.com/browse", "https://reluspatial.com/browse")]),
+            ]),
+            ("Training, simulation & digital twins", [
+                ("PetSim + PetSim MR", "Ghanaian universities · NEIP 2023 winner",
+                 "Drilling-rig training covering the five rig systems, component inspection and quizzes. The Meta Quest 3 build places a full-scale rig in your room, with hand tracking and a palm menu. Endorsed by five universities.",
+                 [("Mixed-reality demo", "https://www.youtube.com/watch?v=zSYMY_LRfao"),
+                  ("reluinteractives.com/…/petsim", "https://reluinteractives.com/solutions/enterprise/education/petsim")]),
+                ("VIVaTS", "Ghana National Gas Company",
+                 "Operator training and live plant monitoring, built as a working digital twin of national gas infrastructure.",
+                 [("Case study", "https://reluinteractives.com/solutions/enterprise/engineering/vivats")]),
+                ("Live digital twins", "Industrial",
+                 "Interactive 3D replicas of plant and equipment, built from engineering drawings for visualization, monitoring and analysis.", []),
+                ("Military VR/AR training", "Soko Aerial Signal Training School",
+                 "VR and AR training experiences for new recruits, built in Unity and Blender.", []),
+                ("Survey Kit Simulation", "Geomatics",
+                 "An interactive 3D guide to surveying instruments such as the total station, for Windows.",
+                 [("itch.io", "https://caleb-mantey.itch.io/survey-kit-simulation")]),
+            ]),
+            ("Games, AR & platform", [
+                ("AKOFENA: Blades of the Ancestors", "Free in the browser · TypeScript, three.js",
+                 "A fighting game with 19 African legends on 17 home stages, played 1v1 online with rollback netcode over WebRTC or on one screen.",
+                 [("akofena.reluspatial.com", "https://akofena.reluspatial.com/")]),
+                ("Dark Echoes", "Unity",
+                 "A third-person zombie shooter.",
+                 [("itch.io", "https://caleb-mantey.itch.io/dark-echoes")]),
+                ("Cube Slice", "Android",
+                 "A mobile game published on Google Play.",
+                 [("Google Play", "https://play.google.com/store/apps/details?id=com.DungaStudios.CubeSlice")]),
+                ("AR experiences", "Mobile AR",
+                 "Markerless AR placement, brand activations and spatial overlays you see through your phone.", []),
+                ("Relu Spatial", "Lead engineer · backend and XR engine",
+                 "A browser-native WebXR platform for AI-assisted 3D creation: AR and VR experiences, a desktop editor, and publishing to web, mobile and headsets.",
+                 [("reluspatial.com", "https://reluspatial.com/")]),
+            ]),
         ],
         "teaching": "Publish a Unity tutorial series on YouTube (@CalebMantey) that builds a third-person bow and arrow system. Playable demos on itch.io.",
         "links_extra": [("itch.io", "https://caleb-mantey.itch.io/")],
@@ -188,7 +256,7 @@ def build(kind):
                        leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
     main_frame = Frame(MAIN_X, BOT, MAIN_W, PAGE_H - TOP - BOT, id="main",
                        leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
-    full_frame = Frame(MAIN_X, BOT, MAIN_W, PAGE_H - TOP - BOT, id="full",
+    full_frame = Frame(13 * mm, BOT, PAGE_W - 26 * mm, PAGE_H - BAND - 9 * mm - BOT, id="full",
                        leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
 
     def paint_first(canvas, _doc):
@@ -204,6 +272,16 @@ def build(kind):
 
     def paint_later(canvas, _doc):
         canvas.saveState()
+        canvas.setFillColor(theme["side"])
+        canvas.rect(0, PAGE_H - BAND, PAGE_W, BAND, stroke=0, fill=1)
+        canvas.setFillColor(acc)
+        canvas.rect(0, PAGE_H - 2.2 * mm, PAGE_W, 2.2 * mm, stroke=0, fill=1)
+        canvas.setFont("Helvetica-Bold", 10.5)
+        canvas.setFillColor(WHITE)
+        canvas.drawString(13 * mm, PAGE_H - BAND + 5.2 * mm, "CALEB MANTEY")
+        canvas.setFont("Helvetica-Bold", 7.6)
+        canvas.setFillColor(theme["side2"])
+        canvas.drawRightString(PAGE_W - 13 * mm, PAGE_H - BAND + 5.4 * mm, theme["label"])
         canvas.setFont("Helvetica", 7)
         canvas.setFillColor(MUTED)
         canvas.drawRightString(PAGE_W - 13 * mm, 8 * mm, "Caleb Mantey · CV")
@@ -259,9 +337,20 @@ def build(kind):
         block += [P("•&nbsp; " + escape(b), "bullet") for b in bullets]
         story.append(KeepTogether(block))
 
-    story += m_head("Selected projects")
-    for name, desc in data["projects"]:
-        story.append(P(f"<b>{escape(name)}</b> &nbsp;·&nbsp; {escape(desc)}", "proj"))
+    story += m_head(data.get("projects_title", "Selected projects"))
+    if "project_groups" in data:
+        acc_hex = acc.hexval().replace("0x", "#")
+        for group, items in data["project_groups"]:
+            story.append(P(escape(group).upper(), "p_group"))
+            for name, context, desc, links in items:
+                link_html = " · ".join(
+                    f'<link href="{escape(u)}" color="{acc_hex}"><u>{escape(lbl)}</u></link>' for lbl, u in links)
+                story.append(P(
+                    f"<b>{escape(name)}</b> &nbsp;<font color='#5a6478'>{escape(context)}</font><br/>"
+                    f"{escape(desc)}" + (f" {link_html}" if links else ""), "proj2"))
+    else:
+        for name, desc in data["projects"]:
+            story.append(P(f"<b>{escape(name)}</b> &nbsp;·&nbsp; {escape(desc)}", "proj"))
 
     doc.build(story)
     print("built", path.name)
